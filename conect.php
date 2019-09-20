@@ -3,7 +3,7 @@
     $dsn = 'mysql:host=localhost;dbname=emplois';
     $user = 'root';
     $pass = '';
-   
+   $abdellah;
 
     try {
         $con = new PDO($dsn,$user,$pass);
