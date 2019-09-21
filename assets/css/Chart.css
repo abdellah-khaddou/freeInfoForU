@@ -1,0 +1,12 @@
+.buttom-chart .posChart canvas {
+  display: flex;
+  max-width: 100%;
+  max-height: 300px;
+}
+
+.posChart canvas {
+  display: flex;
+  max-width: 100%;
+  max-height: 250px;
+}
+
