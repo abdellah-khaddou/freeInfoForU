@@ -23,13 +23,9 @@
 						<thead>
 							<tr>
 								 <th><em class="fa fa-cog"></em></th>
-										<th class="hidden-xs">ID</th>
-										<th>Cours</th>
-										<th>Module</th>
-										<th>Flier</th>
-										<th>Specialite</th>
-										<th>Éditeur</th>
-										<th>Description</th>
+										<th class="hidden-xs">#N</th>
+										<th>Payé</th>
+										
 
 							</tr>
 						</thead>
@@ -44,12 +40,8 @@
 
 											</td>
 								  <td class="hidden-xs">1</td>
-											<td>Cours ? Pr.Houimdi</td>
-											<td>Analyse 1</td>
-											<td>Mathematiques</td>
-											<td>Sciences</td>
-											<td>Amine Boutalaght</td>
-											<td>Sciences et Techniques est un cursus de formation comprenant </td>
+											<td>Maroc</td>
+											
 							</tr>
 
 
@@ -194,7 +186,7 @@
     <div id="id03" class="modal" style="font-size:16px;width:100%;">
         <form class="modal-content animate" style="width: 52%;height: 320px;">
             <div class="imgcontainer" style="height:50%;">  <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
-   <img src="../admin/layout/css/img/delet.jpg" alt="Avatar" class="avatar" style="height:100px"></div>
+   <img src="assets/img/delet.jpg" alt="Avatar" class="avatar" style="height:100px"></div>
             <div class="container" style="width:auto;"> <label ><b>Voulez-vous vraiment supprimer cette specialité ? </b></label>
      <div class="modal-footer">
         <button type="button" class="btn btn-secondary">Oui</button>
