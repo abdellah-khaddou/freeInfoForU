@@ -1,0 +1,68 @@
+.social-box {
+  min-height: 156px;
+  background: #fafcfc;
+  margin-bottom: 30px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.social-box i {
+  display: block;
+  font-size: 40px;
+  line-height: 90px;
+  background: #f5f5f5;
+}
+
+.social-box ul {
+  list-style: none;
+  padding: 10px 0;
+}
+
+.social-box ul li {
+  display: block;
+  width: 50%;
+  float: left;
+}
+
+.social-box ul li:first-child {
+  border-right: 1px solid #f5f5f5;
+}
+
+.social-box ul li strong {
+  display: block;
+  font-size: 20px;
+  color: black;
+}
+
+.social-box ul li span {
+  color: #d4d4d4;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.social-box.facebook i {
+  background: #3b5998;
+  color: white;
+  margin: -1px -1px 1px -1px;
+}
+
+.social-box.twitter i {
+  background: #00aced;
+  color: white;
+  margin: -1px -1px 1px -1px;
+}
+
+.social-box.linkedin i {
+  background: #4875b4;
+  color: white;
+  margin: -1px -1px 1px -1px;
+}
+
+.social-box.google-plus i {
+  background: #d34836;
+  color: white;
+  margin: -1px -1px 1px -1px;
+}
+
