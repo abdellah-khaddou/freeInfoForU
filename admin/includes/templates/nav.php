@@ -96,7 +96,7 @@
 	
 	
 		<div class="cont">
-			<i onclick="show();" class="fa fa-bars " style="height: 26px;font-size: 38px;color: rgb(118,80,231);margin-left:5px;"></i>
+			<i onclick="show();" class="fa fa-bars " style=" position: fixed;height: 26px;font-size: 38px;color: rgb(118,80,231);margin-left:5px;"></i>
 			<div class="contnu" style="overflow:hidden;float:left">
 					
 
