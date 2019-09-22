@@ -23,13 +23,9 @@
 						<thead>
 							<tr>
 								 <th><em class="fa fa-cog"></em></th>
-										<th class="hidden-xs">ID</th>
-										<th>Cours</th>
-										<th>Module</th>
-										<th>Flier</th>
-										<th>Specialite</th>
-										<th>Éditeur</th>
-										<th>Description</th>
+										<th class="hidden-xs">#N</th>
+										<th>Payé</th>
+										
 
 							</tr>
 						</thead>
@@ -44,12 +40,8 @@
 
 											</td>
 								  <td class="hidden-xs">1</td>
-											<td>Cours ? Pr.Houimdi</td>
-											<td>Analyse 1</td>
-											<td>Mathematiques</td>
-											<td>Sciences</td>
-											<td>Amine Boutalaght</td>
-											<td>Sciences et Techniques est un cursus de formation comprenant </td>
+											<td>Maroc</td>
+											
 							</tr>
 
 
@@ -194,7 +186,7 @@
     <div id="id03" class="modal" style="font-size:16px;width:100%;">
         <form class="modal-content animate" style="width: 52%;height: 320px;">
             <div class="imgcontainer" style="height:50%;">  <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
-   <img src="../admin/layout/css/img/delet.jpg" alt="Avatar" class="avatar" style="height:100px"></div>
+   <img src="assets/img/delet.jpg" alt="Avatar" class="avatar" style="height:100px"></div>
             <div class="container" style="width:auto;"> <label ><b>Voulez-vous vraiment supprimer cette specialité ? </b></label>
      <div class="modal-footer">
         <button type="button" class="btn btn-secondary">Oui</button>
@@ -202,7 +194,87 @@
       </div>
  </div>
         </form>
-    </div>
+    </div><script>
+// on click out the modal ,close it
+var modal = document.getElementById('id01');
+  var modal1 = document.getElementById('id02');
+  var modal2 = document.getElementById('id03');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+  if (event.target == modal1) {
+        modal1.style.display = "none";
+    }
+  if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}
+
+
+$(document).ready(function () {
+$('#dtDynamicVerticalScrollExample').DataTable({
+"scrollY": "50vh",
+"scrollCollapse": true,
+});
+$('.dataTables_length').addClass('bs-select');
+});
+  
+  
+//Search bar in th table rechercher()
+function rechercher() {
+  var input, filter, table, tr, td,tdd,tddd, i, txtValue,txtValueI,txtValueII,x,z,y;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  
+  
+  
+  for (i = 0; i < tr.length; i++) {
+   
+    td = tr[i].getElementsByTagName("td")[2];
+    tdd = tr[i].getElementsByTagName("td")[3];
+      tddd = tr[i].getElementsByTagName("td")[4];
+    	
+    if (td) {
+      	
+        txtValue = td.textContent || td.innerText;
+		
+       z=txtValue.toUpperCase().indexOf(filter);
+       
+       
+      if (tdd) {
+      
+      txtValueI = tdd.textContent || tdd.innerText;
+		
+      x=txtValueI.toUpperCase().indexOf(filter);
+      
+      if(tddd){
+       txtValueII = tddd.textContent || tddd.innerText;
+		
+      y=txtValueII.toUpperCase().indexOf(filter);
+      
+      if (z>-1 ||x>-1||y>-1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+      }
+       
+    	
+      }
+    }       
+  }
+  
+  
+  
+}
+  
+
+</script>
 
     <?php
 

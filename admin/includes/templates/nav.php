@@ -100,7 +100,7 @@
 			<div class="contnu" style="overflow:hidden;float:left">
 					
 
-					<ul class="sidebar-ul">
+					<ul class="sidebar-ul" style="text-transform:uppercase;">
 						<li class="sidebar-brand"> <a style="color:rgb(176,13,130);font-size:31px;" href="Acceuil.php">ACCEUIL</a></li>
 						<li> <a style="color:rgb(176,13,130);" href="contry.php">contry</a></li>
 						<li> <a style="color:rgb(176,13,130);" href="Specialites.php">SPECIALITES</a></li>
