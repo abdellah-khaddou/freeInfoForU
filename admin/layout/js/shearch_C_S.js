@@ -3,7 +3,6 @@ var modal = document.getElementById('id01');
 var modal1 = document.getElementById('id02');
 var modal2 = document.getElementById('id03');
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
@@ -24,7 +23,10 @@ $(document).ready(function() {
     $('.dataTables_length').addClass('bs-select');
 });
 
-//Search bar in th table rechercher()
+
+
+//Search bar in th table rechercher() of country and specialité
+
 function rechercher() {
     var input, filter, table, tr, td, tdd, tddd, i, txtValue, txtValueI, txtValueII, x, z, y;
     input = document.getElementById("myInput");

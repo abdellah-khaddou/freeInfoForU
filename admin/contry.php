@@ -1,282 +1,146 @@
-
 <?php
 	$navbar = "";
-	$pageTitle = "Dashbord";
+	$pageTitle = "countries";
 	include "init.php";
-	
+
 ?>
-    
-       
-    <div class="div-r" style="float:right" >
+
+    <div class="div-r" style="float:right">
         <div class="page-content-wrapper" style="width:100%">
-         
-			<div class="container" style="width:100%;">
-					<div>
-						<div >
-							<div class="text-right d-block d-lg-flex flex-row-reverse">
-								<button class="btn btn-secondary shadow" type="button" onclick="document.getElementById('id01').style.display='block'" style="width: 98px;">Ajouter</button>
-							</div>
-						</div>
-						<input type="text" class="shadow"onkeyup="rechercher()" placeholder="Rechercher...." id="myInput" />
-					</div>
-					<table id="myTable" class="table table-responsive table-hover  table-striped table-bordered" cellspacing="0" width="100%">
-						<thead>
-							<tr>
-								 <th><em class="fa fa-cog"></em></th>
-										<th class="hidden-xs">#N</th>
-										<th>Payé</th>
-										
 
-							</tr>
-						</thead>
-						<tbody>
+            <div class="container" style="width:100%;">
+                <div>
+                    <div>
+                        <div class="text-right d-block d-lg-flex flex-row-reverse">
+                            <!--          btn  ajouter country       -->
+                            <button class="btn btn-secondary shadow" type="button" onclick="document.getElementById('id01').style.display='block'" style="width: 98px;">Ajouter</button>
+                        </div>
+                    </div>
+                    <input type="text" class="shadow" onkeyup="rechercher()" placeholder="Rechercher...." id="myInput" />
+                </div>
 
-							<tr>
-								 <td  align="center">
-											 <button  onclick="document.getElementById('id02').style.display='block'" class="btn btn-success raw-btn" type="button"><i class="fa fa-edit" ></i></button>
-											  <button  onclick="document.getElementById('id03').style.display='block'" class="btn btn-danger raw-btn" type="button"><i class="fa fa-trash" ></i></button>
+              
+<!--******************************************************+
 
+                    START TABLE
 
+*******************************************************-->
 
-											</td>
-								  <td class="hidden-xs">1</td>
-											<td>Maroc</td>
-											
-							</tr>
+                <table id="myTable" style="display:inline-table" class="table table-responsive table-hover  table-striped table-bordered" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th style="max-width:100px"><em class="fa fa-cog"></em></th>
+                            <th class="hidden-xs">#N</th>
+                            <th>Payé</th>
 
+                        </tr>
+                    </thead>
+                    <tbody>
 
+                        <tr>
+                            <td align="center" style="max-width: 30px;">
+                                <button onclick="document.getElementById('id02').style.display='block'" class="btn btn-success raw-btn" type="button"><i class="fa fa-edit"></i></button>
+                                <button onclick="document.getElementById('id03').style.display='block'" class="btn btn-danger raw-btn" type="button"><i class="fa fa-trash"></i></button>
 
+                            </td>
+                            <td class="hidden-xs">1</td>
+                            <td>Maroc</td>
 
-						</tbody>
-				</table>
-			</div>
-		</div>
-    
-			<nav class="d-flex d-lg-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center">
-				<ul class="pagination">
-					<li class="page-item"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-					<li class="page-item disabled active"><a class="page-link" href="#">1</a></li>
-					<li class="page-item"><a class="page-link" href="#">2</a></li>
-					<li class="page-item"><a class="page-link" href="#">3</a></li>
-					<li class="page-item"><a class="page-link" href="#">4</a></li>
-					<li class="page-item"><a class="page-link" href="#">5</a></li>
-					<li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
-				</ul>
-			</nav>
-		</div>	
-    <div id="id01" class="modal" style="font-size: 16px;">
-        <form class="modal-content" style="width: 50%;height: auto;">
-            <div class="d-flex flex-column" style="/*height: 21%;*/">
-                <div class="imgcontainer">  <span onclick="document.getElementById('id01').style.display='none'" class="close shadow-lg" title="Close Modal">&times;</span>
-   <img src="assets/img/new.png" alt="Avatar" class="avatar"></div>
-                <div class="container" style="width: 95%;height: 100%;"> <label for="uname"><b>Cours :</b></label>
-  <input class="form-control" type="text" placeholder="Enter le nom de cour" name="nom_cours" required>
+                        </tr>
 
-<label ><b>Specialité :</b></label>
-<div class="input-group mb-3">
-  <select class="custom-select" id="inputGroupSelect01" required>
-    <option value="">Choosir la specialité correspondent...</option>
-    <option value="1">Science</option>
-    <option value="2"> Droit</option>
-    <option value="3">Lettre</option>
-  </select>
-  
-</div>
-
-
- 
-<label ><b>Filièr :</b></label>
-<div class="input-group mb-3">
- 
-  <select class="custom-select" id="inputGroupSelect02" name="spec" required >
-    <option value="">Choosir la filier correspondent...</option>
-    <option value="1">Mathematiques</option>
-    <option value="3">Informatique</option>
-    <option value="2">Physique</option>
-    <option value="3">Biologie</option>
-    <option value="3">Géologie</option>
-  </select>
-  
-</div>
-
-
-
-<label ><b>Description :</b></label>
-<div class="input-group">
-  <textarea class="form-control" aria-label="With textarea" required></textarea>
-</div>                 
-
-
-<div class="d-flex d-sm-flex flex-row  flex-wrap justify-content-sm-center" style="margin-top:20px">      
-<button type="submit"class="btn btn-success shadow" style="width:83px;padding:7px;margin-left: 30px;">Confirmer</button>
-<button type="button" class="btn btn-danger shadow"style="width:83px;padding:7px;margin-left: 30px;"onclick="document.getElementById('id01').style.display='none'">Cancel</button>
-</div>
- </div>
+                    </tbody>
+                </table>
             </div>
-        </form>
-    </div>
-    <div id="id02" class="modal" style="font-size: 16px;">
-        <form class="modal-content" style="width: 50%;height: auto;">
-            <div class="d-flex flex-column" style="/*height: 21%;*/">
-                <div class="imgcontainer">  <span onclick="document.getElementById('id02').style.display='none'" class="close shadow-lg" title="Close Modal">&times;</span>
-   <img src="assets/img/reglage.png" alt="Avatar" class="avatar"></div>
-                <div class="container" style="width: 95%;height: 100%;"> <label for="uname"><b>Cours :</b></label>
-  <input class="form-control" type="text" placeholder="Enter le nom de cour" name="nom_cours" required>
-  <!--
-  <label for="uname"><b>Module</b></label>
-  <input type="password" placeholder="Enter le nom de module" name="umame" required>
 
-  <label  for="uname"><b>Specialité</b></label>
-  <input   type="text" placeholder="Enter le nom de specialité" name="uname" required>
- 
-<div class="dropdown drop">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Speciatité
-  </button>
-  <div class="dropdown-menu drop" aria-labelledby="dropdownMenu2">
-    <button class="dropdown-item" type="button">Action</button>
-    <button class="dropdown-item" type="button">Another action</button>
-    <button class="dropdown-item" type="button">Something else here</button>
-  </div>
-</div>
--->
-<label ><b>Specialité :</b></label>
-<div class="input-group mb-3">
-  <select class="custom-select" id="inputGroupSelect01" required>
-    <option value="">Choosir la specialité correspondent...</option>
-    <option value="1">Science</option>
-    <option value="2"> Droit</option>
-    <option value="3">Lettre</option>
-  </select>
-  
-</div>
+          
+          
+<!--    ***************************************
 
+Modal add new country  id= id01
 
- 
-<label ><b>Filièr :</b></label>
-<div class="input-group mb-3">
- 
-  <select class="custom-select" id="inputGroupSelect02" name="spec" required >
-    <option value="">Choosir la filier correspondent...</option>
-    <option value="1">Mathematiques</option>
-    <option value="3">Informatique</option>
-    <option value="2">Physique</option>
-    <option value="3">Biologie</option>
-    <option value="3">Géologie</option>
-  </select>
-  
-</div>
+***********************************************-->
 
+            <div id="id01" class="modal" style="font-size: 16px;top: 60px;">
+                <form class="modal-content" style="width: 50%;height: auto;">
+                    <div class="d-flex flex-column" style="/*height: 21%;*/">
+                        <div class="imgcontainer"> <span onclick="document.getElementById('id01').style.display='none'" class="close shadow-lg" title="Close Modal">&times;</span>
+                            <img src="layout/css/img/new.png" alt="Avatar" class="avatar"></div>
+                        <div class="container" style="width: 95%;height: 100%;">
+                            <label for="uname"><b>Country name :</b></label>
+                            <input class="form-control" type="text" placeholder="veuillez enter le nom de payer ici " name="country_name" required>
 
-
-<label ><b>Description :</b></label>
-<div class="input-group">
-  <textarea class="form-control" aria-label="With textarea" required></textarea>
-</div>                 
-
-
-<div class="d-flex d-sm-flex flex-row  flex-wrap justify-content-sm-center" style="margin-top:20px">      
-<button type="submit"class="btn btn-success shadow" style="width:83px;padding:7px;margin-left: 30px;">Confirmer</button>
-<button type="button" class="btn btn-danger shadow"style="width:83px;padding:7px;margin-left: 30px;"onclick="document.getElementById('id02').style.display='none'">Cancel</button>
-</div>
- </div>
+                            <div class="d-flex d-sm-flex flex-row  flex-wrap justify-content-sm-center" style="margin-top:20px">
+                                <button type="submit" class="btn btn-success shadow" style="width:83px;padding:7px;margin-left: 30px;">Confirmer</button>
+                                <button type="button" class="btn btn-danger shadow" style="width:83px;padding:7px;margin-left: 30px;" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </form>
-    </div>
-    <div id="id03" class="modal" style="font-size:16px;width:100%;">
-        <form class="modal-content animate" style="width: 52%;height: 320px;">
-            <div class="imgcontainer" style="height:50%;">  <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
-   <img src="assets/img/delet.jpg" alt="Avatar" class="avatar" style="height:100px"></div>
-            <div class="container" style="width:auto;"> <label ><b>Voulez-vous vraiment supprimer cette specialité ? </b></label>
-     <div class="modal-footer">
-        <button type="button" class="btn btn-secondary">Oui</button>
-        <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="document.getElementById('id03').style.display='none'" >Non</button>
-      </div>
- </div>
-        </form>
-    </div><script>
-// on click out the modal ,close it
-var modal = document.getElementById('id01');
-  var modal1 = document.getElementById('id02');
-  var modal2 = document.getElementById('id03');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-  if (event.target == modal1) {
-        modal1.style.display = "none";
-    }
-  if (event.target == modal2) {
-        modal2.style.display = "none";
-    }
-}
+          
+          
+ <!--    ***************************************
 
+Modal Edit  country  id= id02
 
-$(document).ready(function () {
-$('#dtDynamicVerticalScrollExample').DataTable({
-"scrollY": "50vh",
-"scrollCollapse": true,
-});
-$('.dataTables_length').addClass('bs-select');
-});
-  
-  
-//Search bar in th table rechercher()
-function rechercher() {
-  var input, filter, table, tr, td,tdd,tddd, i, txtValue,txtValueI,txtValueII,x,z,y;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  
-  
-  
-  for (i = 0; i < tr.length; i++) {
-   
-    td = tr[i].getElementsByTagName("td")[2];
-    tdd = tr[i].getElementsByTagName("td")[3];
-      tddd = tr[i].getElementsByTagName("td")[4];
-    	
-    if (td) {
-      	
-        txtValue = td.textContent || td.innerText;
-		
-       z=txtValue.toUpperCase().indexOf(filter);
-       
-       
-      if (tdd) {
+***********************************************-->
+
+            <div id="id02" class="modal" style="font-size: 16px;top: 60px;">
+                <form class="modal-content" style="width: 50%;height: auto;">
+                    <div class="d-flex flex-column" style="/*height: 21%;*/">
+                        <div class="imgcontainer"> <span onclick="document.getElementById('id02').style.display='none'" class="close shadow-lg" title="Close Modal">&times;</span>
+                            <img src="layout/css/img/reglage.png" alt="Avatar" class="avatar"></div>
+                        <div class="container" style="width: 95%;height: 100%;">
+                            <label for="uname"><b>Country name :</b></label>
+                            <input class="form-control" type="text" placeholder="veuillez enter le noveau  nom de payer ici " name="country_name" required>
+
+                        </div>
+
+                        <div class="d-flex d-sm-flex flex-row  flex-wrap justify-content-sm-center" style="margin-top:20px">
+                            <button type="submit" class="btn btn-success shadow" style="width:83px;padding:7px;margin-left: 30px;">Confirmer</button>
+                            <button type="button" class="btn btn-danger shadow" style="width:83px;padding:7px;margin-left: 30px;" onclick="document.getElementById('id02').style.display='none'">Cancel</button>
+                        </div>
+                    </div>
+            </div>
+            </form>
+        </div>
+
       
-      txtValueI = tdd.textContent || tdd.innerText;
-		
-      x=txtValueI.toUpperCase().indexOf(filter);
       
-      if(tddd){
-       txtValueII = tddd.textContent || tddd.innerText;
-		
-      y=txtValueII.toUpperCase().indexOf(filter);
-      
-      if (z>-1 ||x>-1||y>-1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-      }
-       
-    	
-      }
-    }       
-  }
-  
-  
-  
-}
-  
+<!--    ***************************************
 
-</script>
+Modal Delet  country  id= id03
 
-    <?php
+***********************************************-->
+
+        <div id="id03" class="modal" style="font-size:16px;width:100%;top: 60px;">
+            <form class="modal-content animate" style="width: 52%;height: 320px;">
+                <div class="imgcontainer" style="height:50%;"> 
+                    <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="layout/css/img/delet.jpg" alt="Avatar" class="avatar" style="height:100px"></div>
+                <div class="container" style="width:auto;">
+                    <label><b>Voulez-vous vraiment supprimer cette payer ? </b></label>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary">Oui</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="document.getElementById('id03').style.display='none'">Non</button>
+                    </div>
+                </div>
+            </form>
+
+
+            
+            
+            
+            
+            
+
+<!--    ***************************************
+
+     			     Fotter
+
+***********************************************-->          
+<?php
 
 	include $tpl.'footer.php';
 ?>

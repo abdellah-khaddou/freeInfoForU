@@ -1,6 +1,6 @@
 <?php
 	$navbar = "";
-	$pageTitle = "Specialités";
+	$pageTitle = "Filièr";
 	include "init.php";
 
 ?>
@@ -30,7 +30,8 @@ START TABLE
                         <tr>
                             <th><em class="fa fa-cog"></em></th>
                             <th class="hidden-xs">Nº</th>
-                            <th>Nom de specialité</th>
+                            <th>Nom de filièr</th>
+                            <th>Specialité</th>
                             <th>Responsables (1..*)</th>
                             <th>Country</th>
                             <th>Description</th>
@@ -40,12 +41,13 @@ START TABLE
                     <tbody>
 
                         <tr>
-                            <td align="center" >
+                            <td align="center" style="max-width:100px">
                                 <button onclick="document.getElementById('id02').style.display='block'" class="btn btn-success raw-btn" type="button"><i class="fa fa-edit"></i></button>
                                 <button onclick="document.getElementById('id03').style.display='block'" class="btn btn-danger raw-btn" type="button"><i class="fa fa-trash"></i></button>
 
                             </td>
                             <td class="hidden-xs">1</td>
+                            <td>Physique</td>
                             <td>Sciences</td>
                             <td>Amine Boutalaght</td>
                             <td>Maroc</td>
@@ -60,7 +62,7 @@ START TABLE
 
 <!--***********************************************
 
-Modal Add  new specialité  id= id01
+Modal Add  new filière  id= id01
 
 ***********************************************-->
 
@@ -70,13 +72,25 @@ Modal Add  new specialité  id= id01
                         <div class="imgcontainer"> <span onclick="document.getElementById('id01').style.display='none'" class="close shadow-lg" title="Close Modal">&times;</span>
                             <img src="layout/css/img/new.png" alt="Avatar" class="avatar"></div>
                         <div class="container" style="width: 95%;height: 100%;">
-                            <label for="uname"><b>Nom de specialité :</b></label>
-                            <input class="form-control" type="text" placeholder="Veuillez enter le nom de specialité " name="nom_s" required>
+                            <label for="uname"><b>Nom de filière :</b></label>
+                            <input class="form-control" type="text" placeholder="Veuillez enter le nom de filière " name="nom_fil" required>
 
+                            <label><b>Specialité :</b></label>
+                            <div class="input-group mb-3">
+
+                                <select class="custom-select" id="inputGroupSelect02" name="spec" required>
+                                    <option value="">Choosir la Specialité...</option>
+                                    <option value="1">Science</option>
+                                    <option value="2">Droit</option>
+                                    <option value="3">Lettre</option>
+                                </select>
+
+                            </div>
+                            
                             <label><b>Responsable :</b></label>
                             <div class="input-group mb-3">
 
-                                <select class="custom-select" id="inputGroupSelect02" name="res" required>
+                                <select class="custom-select" id="inputGroupSelect02" name="resp" required>
                                     <option value="">Choosir le respensable...</option>
                                     <option value="1">Red One</option>
                                     <option value="2">Said Danni</option>
@@ -88,8 +102,8 @@ Modal Add  new specialité  id= id01
                             <div class="input-group mb-3">
 
                                 <select class="custom-select" id="inputGroupSelect02" name="paye" required>
-                                 <!--   <option value="">Choosir la payé correspondent...</option>  -->
-                                    <option value="">Maroc</option>
+                                    <option value="">Choosir la payé correspondent...</option>
+                                    <option value="1">Maroc</option>
 
                                 </select>
 
@@ -113,7 +127,7 @@ Modal Add  new specialité  id= id01
 
 <!--***********************************************
 
-Modal Edit  specialité  id= id02
+Modal Edit  filière  id= id02
 
 ***********************************************-->
 
@@ -125,13 +139,13 @@ Modal Edit  specialité  id= id02
                         <div class="imgcontainer"> <span onclick="document.getElementById('id02').style.display='none'" class="close shadow-lg" title="Close Modal">&times;</span>
                             <img src="layout/css/img/reglage.png" alt="Avatar" class="avatar"></div>
                         <div class="container" style="width: 95%;height: 100%;">
-                            <label for="uname"><b>Nom de specialité :</b></label>
-                            <input class="form-control" type="text" value="Science " name="nom_s" required >
+                            <label for="uname"><b>Nom de filière :</b></label>
+                            <input class="form-control" type="text" value="Physique " name="edit_fil" required >
 
                             <label><b>Responsable :</b></label>
                             <div class="input-group mb-3">
 
-                                <select class="custom-select" id="inputGroupSelect02" name="resp" required>
+                                <select class="custom-select" id="inputGroupSelect02" name="sedit_resp" required>
                                     <option value="">Choosir le respensable...</option>
                                     <option value="1">Red One</option>
                                     <option value="2">Said Danni</option>
@@ -143,7 +157,7 @@ Modal Edit  specialité  id= id02
                             <div class="input-group mb-3">
 
                                 <select class="custom-select" id="inputGroupSelect02" name="paye" required>
-                              <!--      <option value="">Choosir la payé correspondent...</option>  -->
+                                    <option value="">Choosir la payé correspondent...</option>
                                     <option value="1">Maroc</option>
 
                                 </select>
@@ -168,7 +182,7 @@ Modal Edit  specialité  id= id02
 
 <!--***********************************************
 
-Modal delet  specialité  id= id3
+Modal delet  filière  id= id3
 
 ***********************************************-->
 
@@ -177,7 +191,7 @@ Modal delet  specialité  id= id3
                     <div class="imgcontainer" style="height:50%;"> <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
                         <img src="layout/css/img/delet.jpg" alt="Avatar" class="avatar" style="height:100px"></div>
                     <div class="container" style="width:auto;">
-                        <label><b>Voulez-vous vraiment supprimer cette specialité ? </b></label>
+                        <label><b>Voulez-vous vraiment supprimer cette filière ? </b></label>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary">Oui</button>
                             <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="document.getElementById('id03').style.display='none'">Non</button>
